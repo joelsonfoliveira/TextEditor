@@ -10,12 +10,15 @@ namespace TextEditor
 
     static void Menu()
     {
+      short opcao;
+
       Console.Clear();
-      System.Console.WriteLine("O que você deseja fazer?");
+      System.Console.WriteLine("TextEditor");
       System.Console.WriteLine("1 - Abrir Arquivo");
       System.Console.WriteLine("2 - Criar novo arquivo");
       System.Console.WriteLine("0 - Sair");
-      short opcao = short.Parse(Console.ReadLine());
+      System.Console.WriteLine("O que você deseja fazer?");
+      opcao = short.Parse(Console.ReadLine());
 
       switch (opcao)
       {
@@ -28,6 +31,17 @@ namespace TextEditor
 
     static void Abrir() { }
 
-    static void Editar() { }
+    static void Editar()
+    {
+      string text = "";
+
+      Console.Clear();
+      System.Console.WriteLine("Digite seu texto abaixo ou ESC para sair:");
+
+      while (Console.ReadKey().Key != ConsoleKey.Escape)
+      {
+
+      }
+    }
   }
 }
