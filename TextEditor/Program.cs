@@ -38,10 +38,14 @@ namespace TextEditor
       Console.Clear();
       System.Console.WriteLine("Digite seu texto abaixo ou ESC para sair:");
 
-      while (Console.ReadKey().Key != ConsoleKey.Escape)
+      do
       {
-
+        text += Console.ReadLine();
+        text += Environment.NewLine;
       }
+      while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+      System.Console.Write(text);
     }
   }
 }
